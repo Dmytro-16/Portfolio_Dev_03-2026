@@ -115,7 +115,7 @@ body {
     opacity: 1;
   }
   50% {
-    opacity: 0.35;
+    opacity: 0.2;
   }
 }
 
@@ -143,6 +143,116 @@ main {
   padding-top: 64px;
   background-color: var(--bg);
   color: var(--text);
+}
+
+/* ABOUT +++++++++++++++++++++++++++++++++++++++++ */
+.About {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 60vh;
+  background-color: var(--bg);
+  color: var(--text);
+  border-bottom: 1px solid var(--border);
+}
+
+.About h2 {
+  font-size: 48px;
+  color: var(--text);
+}
+
+.About p {
+  font-size: 24px;
+  color: var(--muted);
+}
+
+.About-image img {
+  width: 300px;
+  height: 300px;
+
+  object-fit: cover;
+}
+
+.About-text {
+  margin-right: 24px;
+}
+
+.About-text p {
+  font-size: 24px;
+  color: var(--muted);
+}
+
+.About-text p span {
+  color: var(--accent);
+}
+
+.About-buttons {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.btn-primary {
+  background: var(--accent);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-family: var(--font-sans);
+  font-size: 15px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn-ghost {
+  display: inline-block;
+  text-decoration: none;
+  background-color: var(--bg);
+  border: 1px solid var(--accent);
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-family: var(--font-sans);
+  font-size: 15px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+/* 
+SKILLS ++++++++++++++++++++++++++++++++++++++++++ */
+
+.Skills {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 60vh;
+  background-color: var(--bg);
+  color: var(--text);
+  border-bottom: 1px solid var(--border);
+}
+
+.Skills-list {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.Skill-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.Skill-item img {
+  width: 48px;
+  height: 48px;
 }
 
 /* 404 Not Found +++++++++++++++++++++++++++++++++++ */
