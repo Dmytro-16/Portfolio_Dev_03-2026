@@ -17,9 +17,12 @@
 :root {
   --bg: #f5f2ee;
   --surface: #ede9e3;
-  --accent: #1a7a3c;
-  --accent2: #1a7a3c;
-  /* --accent3: #1a7a3c; */
+
+  --jaune: #ffaf00; /* highlights, em, titres */
+  --vert: #3c7f72; /* status disponible      */
+  --bordeaux: #992800; /* hover, accents sombres  */
+  --orange: #d34a24; /* CTA, bouton principal   */
+
   --text: #1a1814;
   --muted: #8a8580;
   --border: #d8d4ce;
@@ -91,12 +94,10 @@ body {
   display: flex;
   align-items: center;
   gap: 6px;
-  color: var(--accent);
+  color: var(--vert);
   font-family: var(--font-mono);
   font-size: 13px;
   padding: 5px 12px;
-  /* border: 1px solid var(--accent); */
-  /* border-radius: 20px; */
   margin-left: 12px;
 }
 
@@ -104,7 +105,7 @@ body {
   display: inline-block;
   width: 7px;
   height: 7px;
-  background: var(--accent);
+  background: var(--vert);
   border-radius: 50%;
   animation: pulse 2s infinite;
 }
@@ -122,7 +123,7 @@ body {
 /* CTA BUTTON ++++++++++++++++++++++++++++++++++++++ */
 
 .btn-cta {
-  background: var(--accent2);
+  background: var(--orange);
   color: white;
   border: none;
   padding: 10px 20px;
@@ -134,7 +135,7 @@ body {
 }
 
 .btn-cta:hover {
-  background: #0c0c0c;
+  background: var(--bordeaux);
 }
 
 /* MAIN CONTENT +++++++++++++++++++++++++++++++++++ */
@@ -184,7 +185,7 @@ main {
 }
 
 .About-text p span {
-  color: var(--accent);
+  color: var(--orange);
 }
 
 .About-buttons {
@@ -195,7 +196,7 @@ main {
 }
 
 .btn-primary {
-  background: var(--accent);
+  background: var(--bordeaux);
   color: white;
   border: none;
   padding: 10px 20px;
@@ -206,17 +207,29 @@ main {
   transition: background 0.2s;
 }
 
+.btn-primary:hover {
+  background: var(--orange);
+}
+
 .btn-ghost {
   display: inline-block;
   text-decoration: none;
-  background-color: var(--bg);
-  border: 1px solid var(--accent);
+  background-color: transparent;
+  border: 1px solid var(--bordeaux);
+  color: var(--bordeaux);
   padding: 10px 20px;
   border-radius: 8px;
   font-family: var(--font-sans);
   font-size: 15px;
   cursor: pointer;
-  transition: background 0.2s;
+  transition:
+    background 0.2s,
+    color 0.2s;
+}
+
+.btn-ghost:hover {
+  background: var(--bordeaux);
+  color: white;
 }
 /* 
 SKILLS ++++++++++++++++++++++++++++++++++++++++++ */
@@ -226,37 +239,97 @@ SKILLS ++++++++++++++++++++++++++++++++++++++++++ */
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  height: 60vh;
+  height: auto;
   background-color: var(--bg);
+  color: var(--text);
+  border-bottom: 1px solid var(--border);
+}
+
+.Skills-title {
+  font-size: 48px;
   color: var(--text);
   border-bottom: 1px solid var(--border);
 }
 
 .Skills-list {
   display: flex;
-  flex-direction: row;
+  flex-wrap: wrap;
   align-items: center;
-  justify-content: center;
-  gap: 12px;
-  margin-top: 24px;
+  justify-content: space-around;
+  gap: 100px;
+  padding: 40px 24px;
+  margin: 0 auto;
+  max-width: 1000px;
 }
 
 .Skill-item {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
   gap: 12px;
-  margin-top: 24px;
+  color: var(--muted);
+  font-size: 13px;
 }
 
 .Skill-item img {
-  width: 48px;
-  height: 48px;
+  width: 65px;
+  height: 65 px;
+}
+
+/* PROJECTS +++++++++++++++++++++++++++++++++++++++ */
+.Projects-title {
+  font-size: 48px;
+  color: var(--text);
+  border-bottom: 1px solid var(--border);
+}
+.Projects {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  height: auto;
+  background-color: var(--bg);
+  color: var(--text);
+  border-bottom: 1px solid var(--border);
+}
+
+.Projects-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  gap: 100px;
+  padding: 40px 24px;
+  margin: 0 auto;
+  max-width: 1000px;
+}
+
+.Project-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+  color: var(--muted);
+  font-size: 13px;
+  text-align: center;
+}
+
+/* /Footer+++++++++++++++++++++++++++++++++++*/
+.Footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 10vh;
+  background-color: var(--bg);
+  color: var(--text);
+  border-top: 1px solid var(--border);
+}
+.Footer-links {
+  font-size: 24px;
+  color: var(--text);
 }
 
 /* 404 Not Found +++++++++++++++++++++++++++++++++++ */
-
 .NotFound {
   display: flex;
   flex-direction: column;
@@ -264,12 +337,10 @@ SKILLS ++++++++++++++++++++++++++++++++++++++++++ */
   justify-content: center;
   height: 80vh;
 }
-
 .NotFound h1 {
   font-size: 48px;
   color: var(--text);
 }
-
 .NotFound p {
   font-size: 24px;
   color: var(--muted);
