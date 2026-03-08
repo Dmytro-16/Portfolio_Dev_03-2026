@@ -1,6 +1,11 @@
+import { useTranslation } from "react-i18next";
 import Logo from "./Logo";
+import LangSwitcher from "./LangSwitcher";
+import ThemeToggle from "./ThemeToggle";
 
 export default function Header() {
+  const { t } = useTranslation();
+
   const scrollTo = (id) => {
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
   };
@@ -11,25 +16,29 @@ export default function Header() {
         <Logo height={55} />
         <div className="nav-links">
           <button className="nav-link" onClick={() => scrollTo("about")}>
-            À propos
+            {t("header.about")}
           </button>
           <button className="nav-link" onClick={() => scrollTo("projects")}>
-            Projets
+            {t("header.projects")}
           </button>
           <button className="nav-link" onClick={() => scrollTo("skills")}>
-            Stack
+            {t("header.skills")}
           </button>
           <button className="nav-link" onClick={() => scrollTo("contact")}>
-            Contact
+            {t("header.contact")}
           </button>
           <div className="status">
             <span className="dot" />
-            Disponible
+            {t("header.available")}
           </div>
         </div>
-        <button className="btn-cta" onClick={() => scrollTo("contact")}>
-          Me contacter
-        </button>
+        <div className="header-actions">
+          <LangSwitcher />
+          <ThemeToggle />
+          <button className="btn-cta" onClick={() => scrollTo("contact")}>
+            {t("header.cta")}
+          </button>
+        </div>
       </nav>
     </header>
   );

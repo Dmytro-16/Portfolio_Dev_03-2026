@@ -17,12 +17,10 @@
 :root {
   --bg: #f5f2ee;
   --surface: #ede9e3;
-
   --jaune: #ffaf00; /* highlights, em, titres */
   --vert: #3c7f72; /* status disponible      */
   --bordeaux: #992800; /* hover, accents sombres  */
   --orange: #d34a24; /* CTA, bouton principal   */
-
   --text: #1a1814;
   --muted: #8a8580;
   --border: #d8d4ce;
@@ -31,16 +29,22 @@
   --font-mono: "DM Mono", monospace;
 }
 
-/* BASE ++++++++++++++++++++++++++++++++++++++++++ */
+[data-theme="dark"] {
+  --bg: #0f0e0c;
+  --surface: #1a1916;
+  --text: #f0ece6;
+  --muted: #7a7570;
+  --border: #2e2b27;
+  --card: #1e1b18;
+}
 
+/* BASE ++++++++++++++++++++++++++++++++++++++++++ */
 body {
   font-family: var(--font-sans);
   background-color: var(--bg);
   color: var(--text);
 }
-
 /* HEADER +++++++++++++++++++++++++++++++++++++++++ */
-
 .header {
   position: fixed;
   top: 0;
@@ -52,7 +56,6 @@ body {
 }
 
 /* NAVBAR +++++++++++++++++++++++++++++++++++++++++ */
-
 .nav {
   display: flex;
   align-items: center;
@@ -138,6 +141,63 @@ body {
   background: var(--bordeaux);
 }
 
+/* HEADER ACTIONS ++++++++++++++++++++++++++++++++++ */
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.lang-switcher {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.lang-btn {
+  background: none;
+  border: 1px solid var(--border);
+  color: var(--muted);
+  font-family: var(--font-mono);
+  font-size: 12px;
+  padding: 4px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition:
+    color 0.2s,
+    background 0.2s,
+    border-color 0.2s;
+}
+
+.lang-btn:hover {
+  color: var(--text);
+  border-color: var(--text);
+}
+
+.lang-btn.active {
+  color: var(--text);
+  border-color: var(--accent);
+  background: var(--surface);
+}
+
+.theme-toggle {
+  background: none;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 4px 10px;
+  font-size: 14px;
+  cursor: pointer;
+  transition:
+    border-color 0.2s,
+    background 0.2s;
+}
+
+.theme-toggle:hover {
+  background: var(--surface);
+  border-color: var(--text);
+}
+
 /* MAIN CONTENT +++++++++++++++++++++++++++++++++++ */
 
 main {
@@ -158,34 +218,39 @@ main {
   border-bottom: 1px solid var(--border);
 }
 
-.About h2 {
-  font-size: 48px;
+.About-right {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 60vh;
+  background-color: var(--bg);
+  color: var(--text);
+  border-right: 1px solid var(--border);
+  width: 50%;
+}
+
+.About-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 60vh;
+  background-color: var(--bg);
   color: var(--text);
 }
 
-.About p {
-  font-size: 24px;
-  color: var(--muted);
+.About-image {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .About-image img {
   width: 300px;
   height: 300px;
-
   object-fit: cover;
-}
-
-.About-text {
-  margin-right: 24px;
-}
-
-.About-text p {
-  font-size: 24px;
-  color: var(--muted);
-}
-
-.About-text p span {
-  color: var(--orange);
 }
 
 .About-buttons {
@@ -231,6 +296,17 @@ main {
   background: var(--bordeaux);
   color: white;
 }
+/* ABOUT 2 ++++++++++++++++++++++++++++++++++++++++ */
+.About-2 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 60vh;
+  background-color: var(--bg);
+  color: var(--text);
+  border-bottom: 1px solid var(--border);
+}
 /* 
 SKILLS ++++++++++++++++++++++++++++++++++++++++++ */
 
@@ -263,17 +339,47 @@ SKILLS ++++++++++++++++++++++++++++++++++++++++++ */
 }
 
 .Skill-item {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 12px;
   color: var(--muted);
   font-size: 13px;
+  cursor: default;
 }
 
 .Skill-item img {
   width: 65px;
-  height: 65 px;
+  height: 65px;
+  transition: transform 0.2s;
+}
+
+.Skill-item:hover img {
+  transform: scale(1.1);
+}
+
+.Skill-tooltip {
+  position: absolute;
+  bottom: calc(100% + 10px);
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(155, 147, 147, 0.55);
+  backdrop-filter: blur(8px);
+  color: #fff;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  white-space: nowrap;
+  padding: 5px 10px;
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.Skill-item:hover .Skill-tooltip {
+  opacity: 1;
 }
 
 /* PROJECTS +++++++++++++++++++++++++++++++++++++++ */
@@ -312,6 +418,36 @@ SKILLS ++++++++++++++++++++++++++++++++++++++++++ */
   color: var(--muted);
   font-size: 13px;
   text-align: center;
+}
+
+/* CONTACT +++++++++++++++++++++++++++++++++++++++ */
+.Contact {
+  display: flex;
+  flex-direction: row;
+  height: 60vh;
+  background-color: var(--bg);
+  color: var(--text);
+  border-bottom: 1px solid var(--border);
+}
+
+.Contact-text {
+  font-size: 20px;
+  color: var(--text);
+  border-right: 1px solid var(--border);
+  margin: 0 auto;
+  padding: 40px 24px;
+  width: 500px;
+}
+
+.Contact-input {
+  font-size: 48px;
+  color: var(--text);
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
 }
 
 /* /Footer+++++++++++++++++++++++++++++++++++*/

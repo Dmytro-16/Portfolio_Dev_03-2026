@@ -1,0 +1,44 @@
+{
+  "header": {
+    "about": "About",
+    "projects": "Projects",
+    "skills": "Stack",
+    "contact": "Contact",
+    "available": "Available",
+    "cta": "Contact me"
+  },
+  "hero": {
+    "tag": "// JUNIOR WEB DEVELOPER - PARIS, FRANCE",
+    "title1": "I code",
+    "title2": "experiences",
+    "title3": "for the web.",
+    "description": "Passionate about frontend and fullstack development, I turn ideas into elegant, high-performance interfaces. React, Node.js & beyond.",
+    "btn_projects": "View my projects →",
+    "btn_cv": "Download CV"
+  },
+  "skills": {
+    "title": "Tech stack"
+  },
+  "projects": {
+    "title": "My projects"
+  },
+  "about2": {
+    "title": "About",
+    "who": "Who am ",
+    "who_accent": "I",
+    "p1": "Graduated with a Bachelor's in Web Development in 2023, I am passionate about building interfaces that combine technical performance with a refined user experience.",
+    "p2": "I thrive in collaborative, agile environments where code quality and continuous improvement are shared priorities.",
+    "p3": "Outside of code: open source contributor, design & typography, rock climbing."
+  },
+  "contact": {
+    "title": "Let's work together",
+    "name": "Your name",
+    "email": "Your email address",
+    "subject": "Your subject",
+    "message": "Your message",
+    "send": "Send message"
+  },
+  "footer": {
+    "copy": "© 2026 Developer — All rights reserved"
+  }
+}

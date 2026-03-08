@@ -1,4 +1,8 @@
+import { useTranslation } from "react-i18next";
+
 export default function Footer() {
+  const { t } = useTranslation();
+
   return (
     <footer className="Footer">
       <div className="Footer-links">
@@ -8,7 +12,7 @@ export default function Footer() {
           </span>
         ))}
       </div>
-      <div className="Footer-copy">© 2026 Developer — Tous droits réservés</div>
+      <div className="Footer-copy">{t("footer.copy")}</div>
     </footer>
   );
 }

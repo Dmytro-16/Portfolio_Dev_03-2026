@@ -1,0 +1,44 @@
+{
+  "header": {
+    "about": "À propos",
+    "projects": "Projets",
+    "skills": "Stack",
+    "contact": "Contact",
+    "available": "Disponible",
+    "cta": "Me contacter"
+  },
+  "hero": {
+    "tag": "// DEVELOPPEUR WEB JUNIOR - PARIS, FRANCE",
+    "title1": "Je code des",
+    "title2": "expériences",
+    "title3": "web.",
+    "description": "Passionné par le développement frontend et fullstack, je transforme des idées en interfaces élégantes et performantes. React, Node.js & au-delà.",
+    "btn_projects": "Voir mes projets →",
+    "btn_cv": "Télécharger CV"
+  },
+  "skills": {
+    "title": "Stack technique"
+  },
+  "projects": {
+    "title": "Mes projets"
+  },
+  "about2": {
+    "title": "A propos",
+    "who": "Qui suis-",
+    "who_accent": "je",
+    "p1": "Diplômé d'un Bachelor Développement Web en 2023, je suis passionné par la création d'interfaces qui allient performance technique et expérience utilisateur soignée.",
+    "p2": "Je m'épanouis dans les environnements collaboratifs, en mode agile, où la qualité du code et l'amélioration continue sont des priorités partagées.",
+    "p3": "En dehors du code : contributeur open source, design & typographie, escalade."
+  },
+  "contact": {
+    "title": "Travaillons ensemble",
+    "name": "Votre nom",
+    "email": "Votre adresse email",
+    "subject": "Votre sujet",
+    "message": "Votre message",
+    "send": "Envoyer le message"
+  },
+  "footer": {
+    "copy": "© 2026 Developer — Tous droits réservés"
+  }
+}
