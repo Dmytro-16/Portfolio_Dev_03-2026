@@ -149,36 +149,21 @@ body {
   gap: 12px;
 }
 
-.lang-switcher {
-  display: flex;
-  align-items: center;
-  gap: 4px;
-}
-
-.lang-btn {
-  background: none;
+.lang-select {
+  background: var(--surface);
   border: 1px solid var(--border);
-  color: var(--muted);
+  color: var(--text);
   font-family: var(--font-mono);
   font-size: 12px;
-  padding: 4px 10px;
+  padding: 4px 8px;
   border-radius: 6px;
   cursor: pointer;
-  transition:
-    color 0.2s,
-    background 0.2s,
-    border-color 0.2s;
+  outline: none;
+  transition: border-color 0.2s;
 }
 
-.lang-btn:hover {
-  color: var(--text);
+.lang-select:hover {
   border-color: var(--text);
-}
-
-.lang-btn.active {
-  color: var(--text);
-  border-color: var(--accent);
-  background: var(--surface);
 }
 
 .theme-toggle {
@@ -448,6 +433,62 @@ SKILLS ++++++++++++++++++++++++++++++++++++++++++ */
   align-items: center;
   justify-content: center;
   gap: 12px;
+}
+
+.Contact-message {
+  font-size: 20px;
+  color: var(--text);
+  border-right: 1px solid var(--border);
+  margin: 0 auto;
+  padding: 40px 24px;
+  width: 500px;
+}
+
+/* MODAL ++++++++++++++++++++++++++++++++++++ */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-box {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 40px 48px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  max-width: 400px;
+  width: 90%;
+}
+
+.modal-icon {
+  font-size: 40px;
+}
+
+.modal-close {
+  margin-top: 8px;
+  background: var(--orange);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 28px;
+  font-family: var(--font-sans);
+  font-size: 14px;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.modal-close:hover {
+  opacity: 0.85;
 }
 
 /* /Footer+++++++++++++++++++++++++++++++++++*/

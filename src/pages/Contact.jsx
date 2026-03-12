@@ -4,9 +4,6 @@ import emailjs from "@emailjs/browser";
 import { useState } from "react";
 
 export default function Contact() {
-  // const [name, setName] = useState("");
-  // const [email, setEmail] = useState("");
-  // const [subject, setSubject] = useState("");
   const [message, setMessage] = useState(null); // null | "success" | "error"
 
   const { t } = useTranslation();
@@ -81,14 +78,24 @@ export default function Contact() {
         <button type="submit">{t("contact.send")}</button>
       </form>
 
-      {message === "success" && (
-        <div className="Contact-message success">
-          <p>Merci, votre message a bien été envoyé !</p>
-        </div>
-      )}
-      {message === "error" && (
-        <div className="Contact-message error">
-          <p>Une erreur est survenue, merci de réessayer.</p>
+      {message && (
+        <div className="modal-overlay" onClick={() => setMessage(null)}>
+          <div className="modal-box" onClick={(e) => e.stopPropagation()}>
+            {message === "success" ? (
+              <>
+                <p className="modal-icon">✅</p>
+                <p>Merci, votre message a bien été envoyé !</p>
+              </>
+            ) : (
+              <>
+                <p className="modal-icon">❌</p>
+                <p>Une erreur est survenue, merci de réessayer.</p>
+              </>
+            )}
+            <button className="modal-close" onClick={() => setMessage(null)}>
+              Fermer
+            </button>
+          </div>
         </div>
       )}
     </section>

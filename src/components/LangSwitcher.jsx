@@ -5,22 +5,23 @@ const LANGS = ["fr", "en", "ru"];
 export default function LangSwitcher() {
   const { i18n } = useTranslation();
 
-  const changeLang = (lang) => {
+  const changeLang = (e) => {
+    const lang = e.target.value;
     i18n.changeLanguage(lang);
     localStorage.setItem("lang", lang);
   };
 
   return (
-    <div className="lang-switcher">
+    <select
+      className="lang-select"
+      value={i18n.language}
+      onChange={changeLang}
+    >
       {LANGS.map((lang) => (
-        <button
-          key={lang}
-          className={`lang-btn${i18n.language === lang ? " active" : ""}`}
-          onClick={() => changeLang(lang)}
-        >
+        <option key={lang} value={lang}>
           {lang.toUpperCase()}
-        </button>
+        </option>
       ))}
-    </div>
+    </select>
   );
 }
