@@ -40,8 +40,12 @@ export default function Contact() {
   return (
     <section className="Contact">
       <div className="Contact-text">
-        <h1>{t("contact.title")}</h1>
-        <span>
+        <h1 className="hero-title">
+          {t("contact.title")}
+          <em>{t("contact.title_accent")}</em>
+          {t("contact.title_end")}
+        </h1>
+        <span className="Contact-info-About2">
           <p>dsemenchuk@dsdeveloper.fr</p>
           {["GitHub", "LinkedIn"].map((l) => (
             <span key={l} className="footer-link">
@@ -51,12 +55,20 @@ export default function Contact() {
         </span>
       </div>
       <form className="Contact-input" onSubmit={sendEmail}>
-        <input
-          type="text"
-          name="from_name"
-          placeholder={t("contact.name")}
-          required
-        />
+        <div className="Contact-row">
+          <input
+            type="text"
+            name="from_name"
+            placeholder={t("contact.name")}
+            required
+          />
+          <input
+            type="text"
+            name="from_firstname"
+            placeholder={t("contact.firstname")}
+            required
+          />
+        </div>
         <input
           type="email"
           name="from_email"

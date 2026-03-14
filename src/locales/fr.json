@@ -8,7 +8,7 @@
     "cta": "Me contacter"
   },
   "hero": {
-    "tag": "// DEVELOPPEUR WEB JUNIOR - PARIS, FRANCE",
+    "tag": " // DEVELOPPEUR WEB JUNIOR - PARIS, FRANCE ",
     "title1": "Je code des",
     "title2": "expériences",
     "title3": "web.",
@@ -31,8 +31,12 @@
     "p3": "En dehors du code : contributeur open source, design & typographie, escalade."
   },
   "contact": {
-    "title": "Travaillons ensemble",
+    "title": "Travaillons ",
+    "title_accent": "ensemble",
+    "title_end": " .",
     "name": "Votre nom",
+    "firstname": "Votre prénom",
+    "company": "Votre entreprise",
     "email": "Votre adresse email",
     "subject": "Votre sujet",
     "message": "Votre message",

@@ -31,7 +31,9 @@
     "p3": "Outside of code: open source contributor, design & typography, rock climbing."
   },
   "contact": {
-    "title": "Let's work together",
+    "title": "Давайте работать ",
+    "title_accent": "вместе",
+    "title_end": " .",
     "name": "Your name",
     "email": "Your email address",
     "subject": "Your subject",

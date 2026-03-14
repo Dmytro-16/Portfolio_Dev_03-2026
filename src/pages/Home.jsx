@@ -16,7 +16,6 @@ export default function Home() {
   return (
     <main>
       <section className="About" id="about">
-        {/* *********************************** */}
         <div className="About-right">
           <div className="About-text">
             <p>{t("hero.tag")}</p>
@@ -48,10 +47,10 @@ export default function Home() {
         </div>
       </section>
 
-      <div className="Skills-title">
+      <div className="Skills-title" id="skills">
         <h2>{t("skills.title")}</h2>
       </div>
-      <section className="Skills" id="skills">
+      <section className="Skills">
         <div className="Skills-list">
           {[
             {
@@ -82,6 +81,7 @@ export default function Home() {
             {
               name: "React Native",
               desc: "Apps mobiles cross-platform",
+              filter: "hue-rotate(60deg) brightness(0.7) saturate(1.5)",
               src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
             },
             {
@@ -144,9 +144,13 @@ export default function Home() {
               desc: "Assistant IA Anthropic",
               src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cursor/cursor-original.svg",
             },
-          ].map(({ name, src, desc }) => (
+          ].map(({ name, src, desc, filter }) => (
             <div className="Skill-item" key={name}>
-              <img src={src} alt={name} />
+              <img
+                src={src}
+                alt={name}
+                style={filter ? { filter } : undefined}
+              />
               <p>{name}</p>
               <span className="Skill-tooltip">{desc}</span>
             </div>
@@ -154,24 +158,27 @@ export default function Home() {
         </div>
       </section>
 
-      <h2 className="Projects-title">{t("projects.title")}</h2>
-      <section id="projects">
+      <div className="Projects-title" id="projects">
+        <h2>{t("projects.title")}</h2>
+      </div>
+      <section>
         <Projects />
       </section>
 
       <section className="About-2" id="about">
-        <h2>{t("about2.title")}</h2>
-        <div className="About2-left">
-          <h2 className="About2-title">
-            {t("about2.who")}
-            <em style={{ fontStyle: "normal", color: "var(--accent)" }}>
-              {t("about2.who_accent")}
-            </em>
-            ?
-          </h2>
-          <p className="About2-text">{t("about2.p1")}</p>
-          <p className="About2-text">{t("about2.p2")}</p>
-          <p className="About2-text">{t("about2.p3")}</p>
+        <div className="About-left">
+          <img src={imageD} alt="Dmytro Semenchuk" />
+        </div>
+        <div className="About-right">
+          <div className="About-text">
+            <h2 className="hero-title">
+              {t("about2.who")}
+              <em>{t("about2.who_accent")}</em>?
+            </h2>
+            <p>{t("about2.p1")}</p>
+            <p>{t("about2.p2")}</p>
+            <p>{t("about2.p3")}</p>
+          </div>
         </div>
       </section>
       <section id="contact">
