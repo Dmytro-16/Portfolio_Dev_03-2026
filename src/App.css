@@ -760,6 +760,238 @@ SKILLS ++++++++++++++++++++++++++++++++++++++++++ */
   gap: 30px;
 }
 
+/* RESPONSIVE — HERO (About) +++++++++++++++++++++++ */
+
+@media (max-width: 768px) {
+  .About {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .About-right {
+    width: 100%;
+    height: auto;
+    border-right: none;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .About-image {
+    width: 100%;
+    padding: 40px 0;
+  }
+
+  .About-text {
+    padding: 40px 32px;
+  }
+}
+
+@media (max-width: 480px) {
+  .About-text {
+    padding: 32px 20px;
+  }
+
+  .About-image img {
+    width: 220px;
+    height: 220px;
+  }
+
+  .About-buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .btn-primary,
+  .btn-ghost {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* RESPONSIVE — ABOUT 2 +++++++++++++++++++++++++++++ */
+
+@media (max-width: 768px) {
+  .About-2 {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .About-left {
+    width: 100%;
+    height: auto;
+    border-right: none;
+    border-bottom: 1px solid var(--border);
+    padding: 40px 0;
+  }
+
+  .About-2 .About-right {
+    width: 100%;
+    height: auto;
+    border-right: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .About-left img {
+    width: 220px;
+    height: 220px;
+  }
+}
+
+/* RESPONSIVE — SKILLS +++++++++++++++++++++++++++++ */
+
+@media (max-width: 1024px) {
+  .Skills-list {
+    gap: 60px;
+    max-width: 800px;
+  }
+
+  .Skills-title {
+    font-size: 40px;
+    padding: 0 32px;
+  }
+}
+
+@media (max-width: 768px) {
+  .Skills {
+    flex-direction: column;
+  }
+
+  .Skills-title {
+    font-size: 32px;
+    width: 100%;
+    padding: 0 24px;
+    height: 72px;
+  }
+
+  .Skills-list {
+    gap: 40px;
+    padding: 32px 16px;
+  }
+
+  .Skill-item img {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+@media (max-width: 480px) {
+  .Skills-title {
+    font-size: 26px;
+    padding: 0 16px;
+  }
+
+  .Skills-list {
+    gap: 28px;
+    padding: 24px 12px;
+    justify-content: center;
+  }
+
+  .Skill-item {
+    font-size: 11px;
+  }
+
+  .Skill-item img {
+    width: 42px;
+    height: 42px;
+  }
+}
+
+/* RESPONSIVE — PROJECTS +++++++++++++++++++++++++++++ */
+
+@media (max-width: 1024px) {
+  .Projects-title {
+    font-size: 40px;
+    padding: 0 32px;
+  }
+
+  .Projects-list {
+    gap: 60px;
+  }
+}
+
+@media (max-width: 768px) {
+  .Projects {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .Projects-title {
+    font-size: 32px;
+    width: 100%;
+    padding: 0 24px;
+    height: 72px;
+  }
+
+  .Projects-list {
+    gap: 32px;
+    padding: 32px 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .Projects-title {
+    font-size: 26px;
+    padding: 0 16px;
+  }
+
+  .Projects-list {
+    gap: 24px;
+    padding: 24px 12px;
+  }
+}
+
+/* RESPONSIVE — CONTACT +++++++++++++++++++++++++++++ */
+
+@media (max-width: 768px) {
+  .Contact {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .Contact-text {
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid var(--border);
+    padding: 40px 32px;
+  }
+
+  .Contact-input {
+    width: 100%;
+    padding: 40px 32px;
+  }
+}
+
+@media (max-width: 480px) {
+  .Contact-text {
+    padding: 32px 20px;
+  }
+
+  .Contact-input {
+    padding: 32px 20px;
+  }
+
+  .Contact-row {
+    flex-direction: column;
+  }
+}
+
+/* RESPONSIVE — FOOTER +++++++++++++++++++++++++++++ */
+
+@media (max-width: 480px) {
+  .Footer {
+    flex-direction: column;
+    height: auto;
+    padding: 24px 16px;
+    gap: 16px;
+    text-align: center;
+  }
+
+  .Footer-links {
+    font-size: 20px;
+    gap: 20px;
+  }
+}
+
 /* 404 Not Found +++++++++++++++++++++++++++++++++++ */
 .NotFound {
   display: flex;
