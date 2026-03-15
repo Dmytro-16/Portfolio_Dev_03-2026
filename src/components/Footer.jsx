@@ -6,7 +6,15 @@ export default function Footer() {
   return (
     <footer className="Footer">
       <div className="Footer-links">
-        {["GitHub", "LinkedIn", "Twitter", "CV à telecharger"].map((l) => (
+        <a
+          href="https://github.com/Dmytro-16"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="footer-link"
+        >
+          GitHub
+        </a>
+        {["LinkedIn", "Twitter", "CV à telecharger"].map((l) => (
           <span key={l} className="footer-link">
             {l}
           </span>

@@ -686,6 +686,7 @@ SKILLS ++++++++++++++++++++++++++++++++++++++++++ */
   color: var(--muted);
   cursor: pointer;
   transition: color 0.2s;
+  text-decoration: none;
 }
 
 .footer-link:hover {
