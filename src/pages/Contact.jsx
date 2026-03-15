@@ -47,11 +47,22 @@ export default function Contact() {
         </h1>
         <span className="Contact-info-About2">
           <p>dsemenchuk@dsdeveloper.fr</p>
-          {["GitHub", "LinkedIn"].map((l) => (
-            <span key={l} className="footer-link">
-              {l}
-            </span>
-          ))}
+          <a
+            href="https://github.com/Dmytro-16"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="footer-link"
+          >
+            GitHub
+          </a>
+          <a
+            href="https://linkedin.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="footer-link"
+          >
+            LinkedIn
+          </a>
         </span>
       </div>
       <form className="Contact-input" onSubmit={sendEmail}>
