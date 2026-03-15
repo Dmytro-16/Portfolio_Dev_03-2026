@@ -104,6 +104,7 @@ export default function Contact() {
                 <p>Une erreur est survenue, merci de réessayer.</p>
               </>
             )}
+
             <button className="modal-close" onClick={() => setMessage(null)}>
               Fermer
             </button>

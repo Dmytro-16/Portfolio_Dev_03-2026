@@ -14,11 +14,29 @@ export default function Footer() {
         >
           GitHub
         </a>
-        {["LinkedIn", "Twitter", "CV à telecharger"].map((l) => (
-          <span key={l} className="footer-link">
-            {l}
-          </span>
-        ))}
+        <a
+          href="https://linkedin.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="footer-link"
+        >
+          LinkedIn
+        </a>
+        <a
+          href="https://twitter.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="footer-link"
+        >
+          Twitter
+        </a>
+        <a
+          href="/CV.pdf"
+          download
+          className="footer-link"
+        >
+          CV à telecharger
+        </a>
       </div>
       <div className="Footer-copy">{t("footer.copy")}</div>
     </footer>
