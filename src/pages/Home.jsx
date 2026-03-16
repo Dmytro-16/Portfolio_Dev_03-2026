@@ -1,5 +1,5 @@
 import { useTranslation } from "react-i18next";
-import imageD from "../images/IMG_1.svg";
+import imageD from "../images/IMG_1.png";
 import CV from "../download/CV.pdf";
 import North from "../images/North.png";
 import Stripe from "../images/Stripe.svg";
