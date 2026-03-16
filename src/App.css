@@ -462,6 +462,7 @@ main {
 
 .About-2 .About-right {
   border-bottom: none;
+  border-top: 1px solid var(--border);
 }
 
 /*
