@@ -1,10 +1,11 @@
 import { useTranslation } from "react-i18next";
-import imageD from "../images/Image Test.png";
+import imageD from "../images/IMG_1.svg";
 import CV from "../download/CV.pdf";
 
 // IMPORT PAGE
 import Contact from "./Contact";
 import Projects from "./Projects";
+import StickerGrid from "../components/StickerGrid";
 
 export default function Home() {
   const { t } = useTranslation();
@@ -167,7 +168,7 @@ export default function Home() {
 
       <section className="About-2" id="about">
         <div className="About-left">
-          <img src={imageD} alt="Dmytro Semenchuk" />
+          <StickerGrid />
         </div>
         <div className="About-right">
           <div className="About-text">
