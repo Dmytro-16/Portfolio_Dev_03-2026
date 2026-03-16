@@ -1,6 +1,10 @@
 import { useTranslation } from "react-i18next";
 import imageD from "../images/IMG_1.svg";
 import CV from "../download/CV.pdf";
+import North from "../images/North.png";
+import Stripe from "../images/Stripe.svg";
+import Clou from "../images/Clou.png";
+import Claude from "../images/Claude.png";
 
 // IMPORT PAGE
 import Contact from "./Contact";
@@ -69,11 +73,11 @@ export default function Home() {
               desc: "Langage du web, ES6+",
               src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
             },
-            {
-              name: "Tailwind",
-              desc: "CSS utilitaire rapide",
-              src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg",
-            },
+            // {
+            //   name: "Tailwind",
+            //   desc: "CSS utilitaire rapide",
+            //   src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg",
+            // },
             {
               name: "React",
               desc: "UI déclarative par composants",
@@ -118,7 +122,7 @@ export default function Home() {
             {
               name: "Northflank",
               desc: "Déploiement backend & BDD",
-              src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/northflank/northflank-original.svg",
+              src: North,
             },
             {
               name: "GitHub",
@@ -128,22 +132,22 @@ export default function Home() {
             {
               name: "Stripe",
               desc: "Paiements en ligne sécurisés",
-              src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/stripe/stripe-original.svg",
+              src: Stripe,
             },
             {
               name: "Cloudinary",
               desc: "Gestion & optimisation d'images",
-              src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cloudinary/cloudinary-original.svg",
+              src: Clou,
             },
-            {
-              name: "Cursor",
-              desc: "IDE IA pour coder plus vite",
-              src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cursor/cursor-original.svg",
-            },
+            // {
+            //   name: "Cursor",
+            //   desc: "IDE IA pour coder plus vite",
+            //   src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cursor/cursor-original.svg",
+            // },
             {
               name: "Claude",
               desc: "Assistant IA Anthropic",
-              src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cursor/cursor-original.svg",
+              src: Claude,
             },
           ].map(({ name, src, desc, filter }) => (
             <div className="Skill-item" key={name}>

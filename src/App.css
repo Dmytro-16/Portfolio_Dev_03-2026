@@ -515,6 +515,7 @@ SKILLS ++++++++++++++++++++++++++++++++++++++++++ */
 .Skill-item img {
   width: 65px;
   height: 65px;
+  object-fit: contain;
   transition: transform 0.2s;
 }
 

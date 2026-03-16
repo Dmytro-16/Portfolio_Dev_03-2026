@@ -9,7 +9,7 @@
   },
   "hero": {
     "tag": " // DEVELOPPEUR WEB JUNIOR - PARIS, FRANCE ",
-    "title1": "Chaque ligne de code",
+    "title1": "Chaque ligne de code,",
     "title2": "raconte ",
     "title3": "une histoire.",
     "description": "Passionné par le frontend et le fullstack, je construis des expériences web qui ont du sens et du style.",
@@ -26,9 +26,9 @@
     "title": "A propos",
     "who": "Qui suis-",
     "who_accent": "je",
-    "p1": "Diplômé d'un Bachelor Développement Web en 2023, je suis passionné par la création d'interfaces qui allient performance technique et expérience utilisateur soignée.",
-    "p2": "Je m'épanouis dans les environnements collaboratifs, en mode agile, où la qualité du code et l'amélioration continue sont des priorités partagées.",
-    "p3": "En dehors du code : contributeur open source, design & typographie, escalade."
+    "p1": "Ancien danseur professionnel reconverti dans le code — j'ai toujours eu besoin de créer, de construire, de voir le résultat concret de mon travail.",
+    "p2": "Aujourd'hui Concepteur Développeur d'Applications (Bac+3/4, diplôme en préparation), technicien support applicatif en CDI et freelance depuis mars 2026, je suis en pleine transition vers le métier qui me passionne vraiment : le développement fullstack.",
+    "p3": "React, React Native, JavaScript, HTML/CSS — et un projet perso ambitieux en cours, pensé pour avoir un vrai impact. Basé à Paris, disponible pour les opportunités qui ont du sens."
   },
   "contact": {
     "title": "Travaillons ",
