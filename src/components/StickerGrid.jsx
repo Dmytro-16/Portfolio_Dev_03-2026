@@ -2,10 +2,10 @@ import { useRef, useEffect, useState } from "react";
 import sheetImg from "../images/stickers_sheet.png";
 
 const STICKERS = [
-  { col: 0, row: 0, alt: "smile", rot: -6 },
-  { col: 1, row: 0, alt: "lol",   rot: 2  },
-  { col: 2, row: 0, alt: "cool",  rot: -3 },
-  { col: 0, row: 1, alt: "wink",  rot: 7  },
+  { col: 0, row: 0, alt: "sticker_smile", rot: -6 },
+  { col: 1, row: 0, alt: "lol", rot: 2 },
+  { col: 2, row: 0, alt: "cool", rot: -3 },
+  { col: 0, row: 1, alt: "wink", rot: 7 },
   { col: 1, row: 1, alt: "party", rot: -5 },
   { col: 2, row: 1, alt: "shocked", rot: 3 },
 ];
@@ -29,7 +29,11 @@ function Sticker({ data, image }) {
       ref={canvasRef}
       width={sw}
       height={sh}
-      style={{ transform: `rotate(${data.rot}deg)`, width: "110px", height: "auto" }}
+      style={{
+        transform: `rotate(${data.rot}deg)`,
+        width: "110px",
+        height: "auto",
+      }}
       aria-label={data.alt}
     />
   );
