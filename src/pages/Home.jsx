@@ -1,5 +1,5 @@
 import { useTranslation } from "react-i18next";
-import imageD from "../images/IMG_1.png";
+import imageD from "../images/IMG_1.svg";
 import CV from "../download/CV.pdf";
 import North from "../images/North.png";
 import Stripe from "../images/Stripe.svg";
@@ -10,6 +10,7 @@ import Claude from "../images/Claude.png";
 import Contact from "./Contact";
 import Projects from "./Projects";
 import StickerGrid from "../components/StickerGrid";
+import CodeCard from "../components/CodeCard";
 
 export default function Home() {
   const { t } = useTranslation();
@@ -49,6 +50,7 @@ export default function Home() {
 
         <div className="About-image">
           <img src={imageD} alt="Image de test" />
+          <CodeCard />
         </div>
       </section>
 
