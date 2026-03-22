@@ -42,15 +42,15 @@ export default function Header() {
         </div>
         <div className="header-actions">
           <LangSwitcher />
-          <ThemeToggle />
-          <button className="btn-cta" onClick={() => scrollTo("contact")}>
-            {t("header.cta")}
-          </button>
           <button className="hamburger" onClick={() => setMenuOpen((o) => !o)}>
             <span style={{ background: "var(--jaune)" }} />
             <span style={{ background: "var(--bordeaux)" }} />
             <span style={{ background: "var(--vert)" }} />
             <span style={{ background: "var(--orange)" }} />
+          </button>
+          <ThemeToggle />
+          <button className="btn-cta" onClick={() => scrollTo("contact")}>
+            {t("header.cta")}
           </button>
         </div>
       </nav>

@@ -348,6 +348,20 @@ body {
     display: none;
   }
 
+  .logo-btn {
+    display: none;
+  }
+
+  .nav {
+    justify-content: center;
+  }
+
+  .header-actions {
+    width: 100%;
+    justify-content: space-between;
+    padding: 0 16px;
+  }
+
   .hamburger {
     display: flex; /* apparaît sur mobile */
   }
