@@ -28,19 +28,30 @@ Site vitrine mono-page (SPA) présentant mes compétences, projets et mes inform
 
 - **Multi-langue** — Français (défaut), Anglais, Russe avec persistance localStorage
 - **Thème dark/light** — bascule avec persistance localStorage
-- **Formulaire de contact** — envoi d'email via EmailJS + auto-réponse à l'utilisateur
-- **Navigation responsive** — menu hamburger sur mobile
-- **CV téléchargeable** — PDF disponible directement depuis le header
+- **Formulaire de contact** — envoi d'email via EmailJS + auto-réponse à l'utilisateur, protection anti-double-envoi
+- **Navigation responsive** — logo masqué sur mobile, menu hamburger centré avec navigation par drawer
+- **Logos adaptatifs** — inversion automatique des logos sombres (Expo, Next.js, Express, GitHub) en mode dark
+- **Tooltips de compétences** — descriptions traduites au survol de chaque technologie
+- **CV téléchargeable** — PDF disponible directement depuis le hero
 
 ---
 
 ## Pages & sections
 
 - **Hero** — titre, tag, boutons vers les projets et le CV
-- **Stack** — 18 technologies (HTML, CSS, JS, React, Node.js, MongoDB, Next.js, Tailwind, Stripe, Cloudinary...)
+- **Stack** — 16 technologies avec tooltips multilingues (HTML, CSS, JS, React, React Native, Expo, Next.js, Node.js, Express, MongoDB, Netlify, Northflank, GitHub, Stripe, Cloudinary, Claude)
 - **Projets** — showcase des réalisations
-- **À propos** — parcours, formation (Bachelor Développement Web 2023), centres d'intérêt
+- **À propos** — parcours, formation (CDA niveau Bac+3/4 en cours), centres d'intérêt
 - **Contact** — formulaire avec validation et notification de succès/erreur
+
+---
+
+## Branches
+
+| Branche | Rôle                                                    |
+|---------|---------------------------------------------------------|
+| `main`  | Production — déploiement automatique Netlify            |
+| `dev`   | Développement — travail en cours, sans déploiement prod |
 
 ---
 
@@ -52,7 +63,7 @@ cd Portfolio_Dev_03-2026/dev
 npm install
 ```
 
-Créer un fichier `.env` à la racine de `dev/` :
+Créer un fichier `.env` à la racine de `dev/` (voir `.env.example`) :
 
 ```env
 VITE_EMAILJS_SERVICE_ID=your_service_id
