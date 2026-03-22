@@ -16,7 +16,10 @@ export default function Header() {
   return (
     <header className="header">
       <nav className="nav">
-        <button className="logo-btn" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
+        <button
+          className="logo-btn"
+          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+        >
           <Logo height={55} />
         </button>
         <div className="nav-links">
@@ -44,9 +47,10 @@ export default function Header() {
             {t("header.cta")}
           </button>
           <button className="hamburger" onClick={() => setMenuOpen((o) => !o)}>
-            <span />
-            <span />
-            <span />
+            <span style={{ background: "var(--jaune)" }} />
+            <span style={{ background: "var(--bordeaux)" }} />
+            <span style={{ background: "var(--vert)" }} />
+            <span style={{ background: "var(--orange)" }} />
           </button>
         </div>
       </nav>

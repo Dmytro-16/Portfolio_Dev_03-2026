@@ -8,39 +8,59 @@
     "cta": "Contact me"
   },
   "hero": {
-    "tag": "// JUNIOR WEB DEVELOPER - PARIS, FRANCE",
-    "title1": "I code",
-    "title2": "experiences",
-    "title3": "for the web.",
-    "description": "Passionate about frontend and fullstack development, I turn ideas into elegant, high-performance interfaces. React, Node.js & beyond.",
+    "tag": " // JUNIOR WEB DEVELOPER - PARIS, FRANCE ",
+    "title1": "Every line of code,",
+    "title2": "tells ",
+    "title3": "a story.",
+    "description": "Passionate about frontend and fullstack, I build web experiences that have meaning and style.",
     "btn_projects": "View my projects →",
     "btn_cv": "Download CV"
   },
   "skills": {
-    "title": "Tech stack"
+    "title": "Tech stack",
+    "desc": {
+      "html": "Web page structure",
+      "css": "Styling & animations",
+      "js": "Web language, ES6+",
+      "react": "Declarative UI by components",
+      "reactnative": "Cross-platform mobile apps",
+      "expo": "Simplified React Native workflow",
+      "nextjs": "React SSR & advanced routing",
+      "nodejs": "Server-side JavaScript",
+      "express": "Lightweight REST API framework",
+      "mongodb": "NoSQL database",
+      "netlify": "Continuous frontend deployment",
+      "northflank": "Backend & DB deployment",
+      "github": "Versioning & collaboration",
+      "stripe": "Secure online payments",
+      "cloudinary": "Image management & optimization",
+      "claude": "Anthropic AI assistant"
+    }
   },
   "projects": {
     "title": "My projects"
   },
   "about2": {
     "title": "About",
-    "who": "Who am ",
-    "who_accent": "I",
-    "p1": "Graduated with a Bachelor's in Web Development in 2023, I am passionate about building interfaces that combine technical performance with a refined user experience.",
-    "p2": "I thrive in collaborative, agile environments where code quality and continuous improvement are shared priorities.",
-    "p3": "Outside of code: open source contributor, design & typography, rock climbing."
+    "who": "Who am -",
+    "who_accent": " I",
+    "p1": "Former professional dancer turned into coding — I have always needed to create, to build, to see the concrete result of my work.",
+    "p2": "Today Application Developer Designer (Bachelor's degree level, diploma in progress), application support technician on a permanent contract and freelance since March 2026, I am in the middle of transitioning to the job I am truly passionate about: fullstack development.",
+    "p3": "React, React Native, JavaScript, HTML/CSS — and an ambitious personal project in progress, designed to have a real impact. Based in Paris, available for opportunities that have meaning."
   },
   "contact": {
-    "title": "Let's work ",
+    "title": "Let’s work ",
     "title_accent": "together",
-    "title_end": ".",
+    "title_end": " .",
     "name": "Your name",
+    "firstname": "Your first name",
+    "company": "Your company",
     "email": "Your email address",
     "subject": "Your subject",
     "message": "Your message",
     "send": "Send message"
   },
   "footer": {
-    "copy": "© 2026 Developer — All rights reserved"
+    "copy": "© 2026 dsdeveloper — All rights reserved"
   }
 }

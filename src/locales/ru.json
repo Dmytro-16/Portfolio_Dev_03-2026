@@ -1,46 +1,66 @@
 {
   "header": {
-    "about": "About",
-    "projects": "Projects",
-    "skills": "Stack",
-    "contact": "Contact",
-    "available": "Available",
-    "cta": "Contact me"
+    "about": "Обо мне",
+    "projects": "Проекты",
+    "skills": "Стек",
+    "contact": "Контакты",
+    "available": "Доступен",
+    "cta": "Связаться со мной"
   },
   "hero": {
-    "tag": "// Младший веб-разработчик - Париж, Франция",
-    "title1": "I code",
-    "title2": "experiences",
-    "title3": "for the web.",
-    "description": "Passionate about frontend and fullstack development, I turn ideas into elegant, high-performance interfaces. React, Node.js & beyond.",
-    "btn_projects": "Privet →",
-    "btn_cv": "Download CV"
+    "tag": " // МЛАДШИЙ ВЕБ-РАЗРАБОТЧИК - ПАРИЖ, ФРАНЦИЯ ",
+    "title1": "Каждая строка кода,",
+    "title2": "рассказывает ",
+    "title3": "историю.",
+    "description": "Увлечён фронтендом и фуллстеком, я создаю веб-опыт, который имеет смысл и стиль.",
+    "btn_projects": "Посмотреть мои проекты →",
+    "btn_cv": "Скачать CV"
   },
   "skills": {
-    "title": "Tech stack"
+    "title": "Технический стек",
+    "desc": {
+      "html": "Структура веб-страниц",
+      "css": "Стилизация и анимации",
+      "js": "Язык веба, ES6+",
+      "react": "Декларативный UI по компонентам",
+      "reactnative": "Кроссплатформенные мобильные приложения",
+      "expo": "Упрощённый воркфлоу React Native",
+      "nextjs": "React SSR и продвинутый роутинг",
+      "nodejs": "JavaScript на стороне сервера",
+      "express": "Лёгкий фреймворк для REST API",
+      "mongodb": "NoSQL база данных",
+      "netlify": "Непрерывный деплой фронтенда",
+      "northflank": "Деплой бэкенда и БД",
+      "github": "Версионирование и совместная работа",
+      "stripe": "Безопасные онлайн-платежи",
+      "cloudinary": "Управление и оптимизация изображений",
+      "claude": "ИИ-ассистент Anthropic"
+    }
   },
   "projects": {
-    "title": "My projects"
+    "title": "Мои проекты"
   },
   "about2": {
-    "title": "About",
-    "who": "Who am ",
-    "who_accent": "I",
-    "p1": "Graduated with a Bachelor's in Web Development in 2023, I am passionate about building interfaces that combine technical performance with a refined user experience.",
-    "p2": "I thrive in collaborative, agile environments where code quality and continuous improvement are shared priorities.",
-    "p3": "Outside of code: open source contributor, design & typography, rock climbing."
+    "title": "Обо мне",
+    "who": "Кто -",
+    "who_accent": " я",
+    "p1": "Бывший профессиональный танцор, перешедший в программирование — мне всегда было важно создавать, строить и видеть конкретный результат своей работы.",
+    "p2": "Сегодня я разработчик приложений (уровень бакалавра, диплом в процессе), специалист технической поддержки приложений на постоянной работе и фрилансе с марта 2026 года, и нахожусь в процессе перехода к профессии, которая действительно меня увлекает: fullstack-разработка.",
+    "p3": "React, React Native, JavaScript, HTML/CSS — а также амбициозный личный проект в разработке, задуманный с целью оказать реальное влияние. Нахожусь в Париже, открыт к возможностям, которые имеют смысл."
   },
   "contact": {
     "title": "Давайте работать ",
     "title_accent": "вместе",
     "title_end": " .",
-    "name": "Your name",
-    "email": "Your email address",
-    "subject": "Your subject",
-    "message": "Your message",
-    "send": "Send message"
+    "name": "Ваше имя",
+    "firstname": "Ваше имя",
+    "company": "Ваша компания",
+    "email": "Ваш email",
+    "subject": "Тема",
+    "message": "Ваше сообщение",
+    "send": "Отправить сообщение"
   },
   "footer": {
-    "copy": "© 2026 Developer — All rights reserved"
+    "copy": "© 2026 dsdeveloper — Все права защищены"
   }
 }

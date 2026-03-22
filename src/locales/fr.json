@@ -17,7 +17,25 @@
     "btn_cv": "Télécharger CV"
   },
   "skills": {
-    "title": "Stack technique"
+    "title": "Stack technique",
+    "desc": {
+      "html": "Structure & sémantique web",
+      "css": "Mise en page, design & animations",
+      "js": "Interactivité & logique ES6+",
+      "react": "Interfaces déclaratives par composants",
+      "reactnative": "Apps mobiles cross-platform en JS",
+      "expo": "Toolchain React Native clé en main",
+      "nextjs": "SSR, SSG & routing avancé avec React",
+      "nodejs": "Environnement JS côté serveur",
+      "express": "Création d'API REST avec Node.js",
+      "mongodb": "Base de données NoSQL orientée documents",
+      "netlify": "Déploiement & CI/CD pour le frontend",
+      "northflank": "Hébergement backend, BDD & microservices",
+      "github": "Gestion de versions & travail collaboratif",
+      "stripe": "Paiements en ligne via API sécurisée",
+      "cloudinary": "Stockage, optimisation & delivery d'images",
+      "claude": "Modèle de langage IA par Anthropic"
+    }
   },
   "projects": {
     "title": "Mes projets"

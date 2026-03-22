@@ -5,36 +5,44 @@ import { useState } from "react";
 
 export default function Contact() {
   const [message, setMessage] = useState(null); // null | "success" | "error"
+  const [sent, setSent] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   const { t } = useTranslation();
 
-  const sendEmail = (event) => {
+  const sendEmail = async (event) => {
     event.preventDefault();
+    if (sent) return;
+
+    setLoading(true);
+
     const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
     const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 
-    Promise.all([
-      emailjs.sendForm(
-        serviceId,
-        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
-        event.target,
-        publicKey,
-      ),
-      emailjs.sendForm(
-        serviceId,
-        import.meta.env.VITE_EMAILJS_AUTOREPLY_TEMPLATE_ID,
-        event.target,
-        publicKey,
-      ),
-    ])
-      .then(() => {
-        setMessage("success");
-        event.target.reset();
-      })
-      .catch((error) => {
-        console.log(error.text);
-        setMessage("error");
-      });
+    try {
+      await Promise.all([
+        emailjs.sendForm(
+          serviceId,
+          import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+          event.target,
+          publicKey,
+        ),
+        emailjs.sendForm(
+          serviceId,
+          import.meta.env.VITE_EMAILJS_AUTOREPLY_TEMPLATE_ID,
+          event.target,
+          publicKey,
+        ),
+      ]);
+      setMessage("success");
+      setSent(true);
+      event.target.reset();
+    } catch (error) {
+      console.log(error.text);
+      setMessage("error");
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -98,7 +106,10 @@ export default function Contact() {
           placeholder={t("contact.message")}
           required
         ></textarea>
-        <button type="submit">{t("contact.send")}</button>
+
+        <button type="submit" disabled={loading || sent}>
+          {loading ? "Envoi en cours..." : t("contact.send")}
+        </button>
       </form>
 
       {message && (

@@ -1,58 +1,62 @@
-import { useRef, useEffect, useState } from "react";
-import sheetImg from "../images/stickers_sheet.png";
+import img01 from "../images/01_coding.png";
+import img02 from "../images/02_bug_404.png";
+import img05 from "../images/05_coffee.png";
+import img06 from "../images/06_gitflow.png";
+import img07 from "../images/07_deployed.png";
+import img08 from "../images/08_devops.png";
+import imgC from "../images/IMG_C.png";
 
-const STICKERS = [
-  { col: 0, row: 0, alt: "sticker_smile", rot: -6 },
-  { col: 1, row: 0, alt: "lol", rot: 2 },
-  { col: 2, row: 0, alt: "cool", rot: -3 },
-  { col: 0, row: 1, alt: "wink", rot: 7 },
-  { col: 1, row: 1, alt: "party", rot: -5 },
-  { col: 2, row: 1, alt: "shocked", rot: 3 },
+const LEFT = [
+  { src: img01, alt: "coding", rot: -6 },
+  { src: img02, alt: "bug 404", rot: 2 },
+  { src: img05, alt: "coffee", rot: -5 },
 ];
 
-function Sticker({ data, image }) {
-  const canvasRef = useRef(null);
-
-  const sw = image ? image.width / 3 : 1;
-  const sh = image ? image.height / 2 : 1;
-
-  useEffect(() => {
-    if (!image || !canvasRef.current) return;
-    const canvas = canvasRef.current;
-    const ctx = canvas.getContext("2d");
-    ctx.clearRect(0, 0, sw, sh);
-    ctx.drawImage(image, data.col * sw, data.row * sh, sw, sh, 0, 0, sw, sh);
-  }, [image, data, sw, sh]);
-
-  return (
-    <canvas
-      ref={canvasRef}
-      width={sw}
-      height={sh}
-      style={{
-        transform: `rotate(${data.rot}deg)`,
-        width: "110px",
-        height: "auto",
-      }}
-      aria-label={data.alt}
-    />
-  );
-}
+const RIGHT = [
+  { src: img06, alt: "gitflow", rot: 3 },
+  { src: img07, alt: "deployed", rot: -4 },
+  { src: img08, alt: "devops", rot: 5 },
+];
 
 export default function StickerGrid() {
-  const [loadedImage, setLoadedImage] = useState(null);
-
-  useEffect(() => {
-    const img = new Image();
-    img.src = sheetImg;
-    img.onload = () => setLoadedImage(img);
-  }, []);
-
   return (
-    <div className="sticker-grid">
-      {STICKERS.map((s) => (
-        <Sticker key={s.alt} data={s} image={loadedImage} />
-      ))}
+    <div className="sticker-grid-center">
+      <div className="sticker-col">
+        {LEFT.map((s) => (
+          <img
+            key={s.alt}
+            src={s.src}
+            alt={s.alt}
+            style={{
+              width: "100px",
+              height: "auto",
+              transform: `rotate(${s.rot}deg)`,
+            }}
+          />
+        ))}
+      </div>
+
+      <img
+        src={imgC}
+        alt="avatar"
+        className="sticker-main"
+        style={{ width: "300px", height: "500px" }}
+      />
+
+      <div className="sticker-col">
+        {RIGHT.map((s) => (
+          <img
+            key={s.alt}
+            src={s.src}
+            alt={s.alt}
+            style={{
+              width: "100px",
+              height: "auto",
+              transform: `rotate(${s.rot}deg)`,
+            }}
+          />
+        ))}
+      </div>
     </div>
   );
 }

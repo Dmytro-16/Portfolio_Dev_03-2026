@@ -1,10 +1,10 @@
 import { useTranslation } from "react-i18next";
-import imageD from "../images/IMG_1.svg";
 import CV from "../download/CV.pdf";
 import North from "../images/North.png";
 import Stripe from "../images/Stripe.svg";
 import Clou from "../images/Clou.png";
 import Claude from "../images/Claude.png";
+import LineS from "../images/Logo_Lines_S.svg";
 
 // IMPORT PAGE
 import Contact from "./Contact";
@@ -49,113 +49,39 @@ export default function Home() {
         </div>
 
         <div className="About-image">
-          <img src={imageD} alt="Image de test" />
           <CodeCard />
         </div>
       </section>
 
       <div className="Skills-title" id="skills">
         <h2>{t("skills.title")}</h2>
+        {/* <img src={LineS} alt="Image de test" /> */}
       </div>
       <section className="Skills">
         <div className="Skills-list">
           {[
-            {
-              name: "HTML",
-              desc: "Structure des pages web",
-              src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
-            },
-            {
-              name: "CSS",
-              desc: "Mise en forme & animations",
-              src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
-            },
-            {
-              name: "JavaScript",
-              desc: "Langage du web, ES6+",
-              src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
-            },
-            // {
-            //   name: "Tailwind",
-            //   desc: "CSS utilitaire rapide",
-            //   src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg",
-            // },
-            {
-              name: "React",
-              desc: "UI déclarative par composants",
-              src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
-            },
-            {
-              name: "React Native",
-              desc: "Apps mobiles cross-platform",
-              filter: "hue-rotate(60deg) brightness(0.7) saturate(1.5)",
-              src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
-            },
-            {
-              name: "Expo",
-              desc: "Workflow React Native simplifié",
-              src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/expo/expo-original.svg",
-            },
-            {
-              name: "Next.js",
-              desc: "React SSR & routing avancé",
-              src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg",
-            },
-            {
-              name: "Node.js",
-              desc: "JS côté serveur",
-              src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
-            },
-            {
-              name: "Express",
-              desc: "Framework API REST léger",
-              src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg",
-            },
-            {
-              name: "MongoDB",
-              desc: "Base de données NoSQL",
-              src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg",
-            },
-            {
-              name: "Netlify",
-              desc: "Déploiement frontend continu",
-              src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/netlify/netlify-original.svg",
-            },
-            {
-              name: "Northflank",
-              desc: "Déploiement backend & BDD",
-              src: North,
-            },
-            {
-              name: "GitHub",
-              desc: "Versioning & collaboration",
-              src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg",
-            },
-            {
-              name: "Stripe",
-              desc: "Paiements en ligne sécurisés",
-              src: Stripe,
-            },
-            {
-              name: "Cloudinary",
-              desc: "Gestion & optimisation d'images",
-              src: Clou,
-            },
-            // {
-            //   name: "Cursor",
-            //   desc: "IDE IA pour coder plus vite",
-            //   src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cursor/cursor-original.svg",
-            // },
-            {
-              name: "Claude",
-              desc: "Assistant IA Anthropic",
-              src: Claude,
-            },
-          ].map(({ name, src, desc, filter }) => (
+            { name: "HTML",         desc: t("skills.desc.html"),        src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" },
+            { name: "CSS",          desc: t("skills.desc.css"),         src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" },
+            { name: "JavaScript",   desc: t("skills.desc.js"),          src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" },
+            { name: "React",        desc: t("skills.desc.react"),       src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
+            { name: "React Native", desc: t("skills.desc.reactnative"), src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg", filter: "hue-rotate(60deg) brightness(0.7) saturate(1.5)" },
+            { name: "Expo",         desc: t("skills.desc.expo"),        src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/expo/expo-original.svg",     darkInvert: true },
+            { name: "Next.js",      desc: t("skills.desc.nextjs"),      src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg", darkInvert: true },
+            { name: "Node.js",      desc: t("skills.desc.nodejs"),      src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" },
+            { name: "Express",      desc: t("skills.desc.express"),     src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg", darkInvert: true },
+            { name: "MongoDB",      desc: t("skills.desc.mongodb"),     src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" },
+            { name: "Netlify",      desc: t("skills.desc.netlify"),     src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/netlify/netlify-original.svg" },
+            { name: "Northflank",   desc: t("skills.desc.northflank"),  src: North },
+            { name: "GitHub",       desc: t("skills.desc.github"),      src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg", darkInvert: true },
+            { name: "Stripe",       desc: t("skills.desc.stripe"),      src: Stripe },
+            { name: "Cloudinary",   desc: t("skills.desc.cloudinary"),  src: Clou },
+            { name: "Claude",       desc: t("skills.desc.claude"),      src: Claude },
+          ].map(({ name, src, desc, filter, darkInvert }) => (
             <div className="Skill-item" key={name}>
               <img
                 src={src}
                 alt={name}
+                className={darkInvert ? "dark-invert" : undefined}
                 style={filter ? { filter } : undefined}
               />
               <p>{name}</p>

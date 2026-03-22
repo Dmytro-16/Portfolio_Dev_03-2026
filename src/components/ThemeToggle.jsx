@@ -1,4 +1,6 @@
 import { useEffect, useState } from "react";
+import Moon from "../images/moon.svg";
+import Sun from "../images/sun.svg";
 
 export default function ThemeToggle() {
   const [dark, setDark] = useState(
@@ -19,7 +21,7 @@ export default function ThemeToggle() {
       onClick={() => setDark((d) => !d)}
       aria-label="Toggle theme"
     >
-      {dark ? "☀️" : "🌙"}
+      {dark ? <img src={Sun} alt="Sun" /> : <img src={Moon} alt="Moon" />}
     </button>
   );
 }

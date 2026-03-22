@@ -12,11 +12,7 @@ export default function LangSwitcher() {
   };
 
   return (
-    <select
-      className="lang-select"
-      value={i18n.language}
-      onChange={changeLang}
-    >
+    <select className="lang-select" value={i18n.language} onChange={changeLang}>
       {LANGS.map((lang) => (
         <option key={lang} value={lang}>
           {lang.toUpperCase()}
