@@ -41,7 +41,7 @@ export default function Home() {
               >
                 {t("hero.btn_projects")}
               </button>
-              <a className="btn-ghost" href={CV} download="CV">
+              <a className="btn-ghost" href={CV} download="CV_SEMENCHUK_Dmytro">
                 {t("hero.btn_cv")}
               </a>
             </div>
