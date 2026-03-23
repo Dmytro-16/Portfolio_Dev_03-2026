@@ -64,7 +64,7 @@ export default function Contact() {
             GitHub
           </a>
           <a
-            href="https://linkedin.com"
+            href="https://www.linkedin.com/in/dmytro-semenchuk"
             target="_blank"
             rel="noopener noreferrer"
             className="footer-link"

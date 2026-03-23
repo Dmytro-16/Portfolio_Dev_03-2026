@@ -1,4 +1,5 @@
 import { useTranslation } from "react-i18next";
+import CV from "../download/CV_SEMENCHUK_Dmytro.pdf";
 
 export default function Footer() {
   const { t } = useTranslation();
@@ -15,7 +16,7 @@ export default function Footer() {
           GitHub
         </a>
         <a
-          href="https://linkedin.com"
+          href="https://www.linkedin.com/in/dmytro-semenchuk"
           target="_blank"
           rel="noopener noreferrer"
           className="footer-link"
@@ -30,11 +31,7 @@ export default function Footer() {
         >
           Twitter
         </a>
-        <a
-          href="/CV.pdf"
-          download
-          className="footer-link"
-        >
+        <a href={CV} download className="footer-link">
           CV à telecharger
         </a>
       </div>
