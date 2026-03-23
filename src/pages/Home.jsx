@@ -130,6 +130,7 @@ export default function Home() {
               src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg",
               darkInvert: true,
             },
+            { name: "Git", desc: t("skills.desc.git"), src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" },
             { name: "Stripe", desc: t("skills.desc.stripe"), src: Stripe },
             {
               name: "Cloudinary",

@@ -909,7 +909,6 @@ SKILLS ++++++++++++++++++++++++++++++++++++++++++ */
   height: 10vh;
   background-color: var(--bg);
   color: var(--muted);
-  /* border-top: 1px solid var(--border); */
 }
 .Footer-links {
   font-size: 24px;
@@ -1156,13 +1155,63 @@ SKILLS ++++++++++++++++++++++++++++++++++++++++++ */
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 80vh;
+  height: calc(100vh - 64px);
+  margin-top: 64px;
+  gap: 12px;
+  text-align: center;
+  padding: 0 24px;
+  background-color: var(--bg);
+  border-bottom: 1px solid var(--border);
 }
-.NotFound h1 {
-  font-size: 48px;
+.NotFound-code {
+  font-size: 12px;
+  color: var(--vert);
+  letter-spacing: 2px;
+  margin: 0;
+}
+.NotFound-title {
+  font-size: 80px;
+  font-weight: 900;
+  color: var(--orange);
+  line-height: 1;
+  margin: 0;
+}
+.NotFound-sub {
+  font-size: 20px;
+  font-weight: 700;
   color: var(--text);
+  margin: 0;
 }
-.NotFound p {
-  font-size: 24px;
-  color: var(--muted);
+.NotFound-text {
+  font-size: 14px;
+  color: var(--bordeaux);
+  margin: 0;
+}
+.NotFound-btn {
+  margin-top: 20px;
+  padding: 12px 32px;
+  background: var(--orange);
+  color: #fff;
+  border-radius: 8px;
+  font-weight: 400;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+.NotFound-btn:hover {
+  background: var(--bordeaux);
+}
+
+@media (max-width: 768px) {
+  .NotFound-title {
+    font-size: 56px;
+  }
+
+  .NotFound-sub {
+    font-size: 16px;
+  }
+
+  .NotFound-btn {
+    padding: 10px 24px;
+    font-size: 14px;
+  }
 }

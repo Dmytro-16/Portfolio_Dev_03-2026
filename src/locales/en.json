@@ -14,7 +14,7 @@
     "title3": "a story.",
     "description": "Passionate about frontend and fullstack, I build web experiences that have meaning and style.",
     "btn_projects": "View my projects →",
-    "btn_cv": "Download CV"
+    "btn_cv": "Download CV ⬇️"
   },
   "skills": {
     "title": "Tech stack",
@@ -32,6 +32,7 @@
       "netlify": "Continuous frontend deployment",
       "northflank": "Backend & DB deployment",
       "github": "Versioning & collaboration",
+      "git": "Local versioning & branch management",
       "stripe": "Secure online payments",
       "cloudinary": "Image management & optimization",
       "claude": "Anthropic AI assistant"
@@ -60,7 +61,14 @@
     "message": "Your message",
     "send": "Send message"
   },
+  "notfound": {
+    "code": "error",
+    "sub": "Page not found",
+    "text": "Oops… The page you are looking for does not exist.",
+    "btn": "Back to home"
+  },
   "footer": {
-    "copy": "© 2026 dsdeveloper — All rights reserved"
+    "copy": "© 2026 dsdeveloper — All rights reserved",
+    "cv": "Download CV"
   }
 }

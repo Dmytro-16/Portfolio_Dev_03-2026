@@ -32,7 +32,7 @@ export default function Footer() {
           Twitter
         </a>
         <a href={CV} download className="footer-link">
-          CV à telecharger
+          {t("footer.cv")}
         </a>
       </div>
       <div className="Footer-copy">{t("footer.copy")}</div>
