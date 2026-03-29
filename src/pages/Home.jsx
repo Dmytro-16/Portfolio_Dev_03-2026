@@ -156,7 +156,7 @@ export default function Home() {
       <div className="Projects-title" id="projects">
         <h2>{t("projects.title")}</h2>
       </div>
-      <section>
+      <section className="Projects">
         <Projects />
       </section>
 

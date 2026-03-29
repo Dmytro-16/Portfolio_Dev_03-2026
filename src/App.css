@@ -704,21 +704,21 @@ SKILLS ++++++++++++++++++++++++++++++++++++++++++ */
   align-items: center;
   justify-content: center;
   flex-direction: row;
-  height: 10vh;
   background-color: var(--bg);
   color: var(--text);
   border-bottom: 1px solid var(--border);
+  padding: 40px 0;
 }
 
 .Projects-list {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-around;
-  gap: 100px;
-  padding: 40px 24px;
+  justify-content: center;
+  gap: 32px;
+  padding: 48px 24px;
   margin: 0 auto;
-  max-width: 1000px;
+  max-width: 1100px;
+  width: 100%;
 }
 
 .Project-item {
@@ -729,6 +729,85 @@ SKILLS ++++++++++++++++++++++++++++++++++++++++++ */
   color: var(--muted);
   font-size: 13px;
   text-align: center;
+}
+
+.Project-card {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.2s, box-shadow 0.2s;
+  width: 320px;
+  background-color: var(--bg);
+}
+
+.Project-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.Project-card--wip {
+  opacity: 0.5;
+  cursor: default;
+}
+
+.Project-img-wrapper {
+  width: 100%;
+}
+
+.Project-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.Project-img--placeholder {
+  background-color: var(--border);
+}
+
+.Project-info {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 16px;
+}
+
+.Project-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text);
+  margin: 0;
+}
+
+.Project-desc {
+  font-size: 13px;
+  color: var(--muted);
+  margin: 0;
+  line-height: 1.5;
+}
+
+.Project-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 4px;
+}
+
+.Project-tag {
+  font-size: 11px;
+  padding: 3px 8px;
+  border-radius: 20px;
+  border: 1px solid var(--border);
+  color: var(--muted);
+}
+
+.Project-label {
+  padding: 8px 16px 12px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text);
 }
 
 /* CONTACT +++++++++++++++++++++++++++++++++++++++ */
@@ -1062,7 +1141,11 @@ SKILLS ++++++++++++++++++++++++++++++++++++++++++ */
   }
 
   .Projects-list {
-    gap: 60px;
+    gap: 24px;
+  }
+
+  .Project-card {
+    width: 280px;
   }
 }
 
@@ -1080,8 +1163,13 @@ SKILLS ++++++++++++++++++++++++++++++++++++++++++ */
   }
 
   .Projects-list {
-    gap: 32px;
+    gap: 24px;
     padding: 32px 16px;
+  }
+
+  .Project-card {
+    width: 100%;
+    max-width: 480px;
   }
 }
 
@@ -1092,8 +1180,12 @@ SKILLS ++++++++++++++++++++++++++++++++++++++++++ */
   }
 
   .Projects-list {
-    gap: 24px;
+    gap: 16px;
     padding: 24px 12px;
+  }
+
+  .Project-card {
+    width: 100%;
   }
 }
 
