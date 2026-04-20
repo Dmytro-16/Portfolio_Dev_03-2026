@@ -5,6 +5,7 @@ import Stripe from "../images/Stripe.svg";
 import Clou from "../images/Clou.png";
 import Claude from "../images/Claude.png";
 import LineS from "../images/Logo_Lines_S.svg";
+import Cursor from "../images/Cursor AI.svg";
 
 // IMPORT PAGE
 import Contact from "./Contact";
@@ -138,6 +139,12 @@ export default function Home() {
               src: Clou,
             },
             { name: "Claude", desc: t("skills.desc.claude"), src: Claude },
+            {
+              name: "Cursor",
+              desc: t("skills.desc.cursor"),
+              src: Cursor,
+            },
+
           ].map(({ name, src, desc, filter, darkInvert }) => (
             <div className="Skill-item" key={name}>
               <img

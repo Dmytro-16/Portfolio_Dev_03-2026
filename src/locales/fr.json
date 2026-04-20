@@ -35,11 +35,26 @@
       "git": "Versioning local & gestion de branches",
       "stripe": "Paiements en ligne via API sécurisée",
       "cloudinary": "Stockage, optimisation & delivery d'images",
-      "claude": "Modèle de langage IA par Anthropic"
+      "claude": "Modèle de langage IA par Anthropic",
+      "cursor": "Assistant IA de Cursor"
     }
   },
   "projects": {
-    "title": "Mes projets"
+    "title": "Mes projets",
+    "items": {
+      "marvel": {
+        "title": "Marvel Site — réplique d'un site vitrine",
+        "desc": "Site vitrine dédié à l'univers Marvel — exploration des personnages, favoris et authentification."
+      },
+      "AiRB_REP_APP": {
+        "title": "Petite réplique d'une application mobile type Airbnb",
+        "desc": "Réplique d'une application mobile type Airbnb, avec une interface utilisateur et une navigation simplifiée."
+      },
+      "project3": {
+        "title": "Projet 3",
+        "desc": "En cours de développement."
+      }
+    }
   },
   "about2": {
     "title": "A propos",

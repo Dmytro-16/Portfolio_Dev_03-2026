@@ -35,11 +35,26 @@
       "git": "Local versioning & branch management",
       "stripe": "Secure online payments",
       "cloudinary": "Image management & optimization",
-      "claude": "Anthropic AI assistant"
+      "claude": "Anthropic AI assistant model",
+      "cursor": "Cursor AI assistant tool"
     }
   },
   "projects": {
-    "title": "My projects"
+    "title": "My projects",
+    "items": {
+      "marvel": {
+        "title": "Marvel site — showcase website replica",
+        "desc": "Showcase site dedicated to the Marvel universe — browse characters, favorites and authentication."
+      },
+      "AiRB_REP_APP": {
+        "title": "Small mobile app replica — Airbnb-style",
+        "desc": "Mobile app replica with a streamlined UI and simplified navigation."
+      },
+      "project3": {
+        "title": "Project 3",
+        "desc": "In development."
+      }
+    }
   },
   "about2": {
     "title": "About",

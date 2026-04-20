@@ -31,6 +31,7 @@ body {
   --muted: #8a8580;
   --border: #d8d4ce;
   --card: #e8e4de;
+  --project-card-media-height: 400px;
   --font-sans: "Syne", sans-serif;
   --font-mono: "DM Mono", monospace;
 }
@@ -713,6 +714,7 @@ SKILLS ++++++++++++++++++++++++++++++++++++++++++ */
 .Projects-list {
   display: flex;
   flex-wrap: wrap;
+  align-items: stretch;
   justify-content: center;
   gap: 32px;
   padding: 48px 24px;
@@ -740,6 +742,7 @@ SKILLS ++++++++++++++++++++++++++++++++++++++++++ */
   overflow: hidden;
   transition: transform 0.2s, box-shadow 0.2s;
   width: 320px;
+  height: 100%;
   background-color: var(--bg);
 }
 
@@ -753,8 +756,20 @@ SKILLS ++++++++++++++++++++++++++++++++++++++++++ */
   cursor: default;
 }
 
+/* Hauteur fixe commune à toutes les cartes (zone visuelle = même cadre que Marvel) */
 .Project-img-wrapper {
   width: 100%;
+  height: var(--project-card-media-height);
+  flex-shrink: 0;
+  overflow: hidden;
+  background-color: var(--border);
+}
+
+.Project-img-wrapper > .Project-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 .Project-img {
@@ -764,7 +779,60 @@ SKILLS ++++++++++++++++++++++++++++++++++++++++++ */
 }
 
 .Project-img--placeholder {
+  height: 100%;
+  min-height: 0;
   background-color: var(--border);
+}
+
+/* Grille 2×2 : captures entièrement visibles, espacement net */
+.Project-img-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-rows: repeat(2, minmax(0, 1fr));
+  gap: 6px;
+  box-sizing: border-box;
+  padding: 4px;
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  background-color: var(--border);
+}
+
+.Project-img-grid .Project-img--thumb {
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  min-width: 0;
+  display: block;
+  object-fit: contain;
+  object-position: center center;
+  background-color: var(--bg);
+  border-radius: 4px;
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.06);
+}
+
+@media (max-width: 480px) {
+  .Project-img-grid {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 10px;
+    padding: 6px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-padding-inline: 6px;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+  }
+
+  .Project-img-grid .Project-img--thumb {
+    flex: 0 0 calc(85% - 6px);
+    max-width: calc(85% - 6px);
+    height: 100%;
+    align-self: stretch;
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
+  }
 }
 
 .Project-info {
@@ -772,6 +840,16 @@ SKILLS ++++++++++++++++++++++++++++++++++++++++++ */
   flex-direction: column;
   gap: 8px;
   padding: 16px;
+  flex: 1 1 auto;
+  min-height: 0;
+}
+
+.Project-text {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex: 1 1 auto;
+  min-height: 7.5rem;
 }
 
 .Project-title {
